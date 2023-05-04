@@ -1,0 +1,31 @@
+{% extends 'main/header.html' %}
+
+{% block content %}
+<h1> Подать заявку </h1>
+<p>Вы можете оставить свою заявку</p>
+<form method="post" style="">
+    {% csrf_token %}
+    <div>
+        <input id="full_name" name="full_name" type="text" placeholder="ФИО">
+        <br>
+    </div>
+    <div>
+        <input class="mt-2" id="phone" name="phone" type="text" placeholder="Телефон">
+        <br>
+    </div>
+    <div>
+        <input class="mt-2" id="email" name="email" type="email" placeholder="Эл. почта">
+        <br>
+    </div>
+    <button type="submit" value="Submit" class="btn btn-success mt-2">Отправить заявку</button>
+    <p>Перед отправкой данных прочитайте: <a class="change_lic" id="license_open" target="_blank">Лицензионное соглашение</a> </p>
+    <script>
+        document.getElementById("license_open").addEventListener("click", function() {
+            window.open("/static/main/docs/Processing_of_personal_data.pdf", "_blank");
+        });
+    </script>
+</form>
+<p style="line-height: 0">Или свяжитесь с нами лично:</p>
+<p>Тел. 8 (999) 999-99 99</p>
+<p style="line-height: 0">Адрес автошколы: ул. Ленина 5 </p>
+{% endblock %}
