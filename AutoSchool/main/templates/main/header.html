@@ -13,13 +13,14 @@
           <img class="container" style="vertical-align: middle; margin-left: 20px; width: 240px" alt="Лого" src="{% static 'main/image/ologo.png' %}">
       </div>
 
-      <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+      <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0" style="position: absolute; left: 25%">
           <li><a href="{% url 'home' %}" class="nav-link px-2 link-secondary"><p class="change-text">Главная</p></a></li>
         <li><a href="{% url 'apps' %}" class="nav-link px-2"><p class="change-text">Подать заявку</p></a></li>
         <li><a href="{% url 'programs' %}" class="nav-link px-2"><p class="change-text">Программа обучения</p></a></li>
         <li><a href="{% url 'school' %}" class="nav-link px-2"><p class="change-text">Об автошколе</p></a></li>
           <li><a href="{% url 'org' %}" class="nav-link px-2"><p class="change-text">Об организации</p></a></li>
           <li><a href="{% url 'contacts' %}" class="nav-link px-2"><p class="change-text">Контакты</p></a></li>
+          <li><a href="{% url 'news_home' %}" class="nav-link px-2"><p class="change-text">Новости</p></a></li>
       </ul>
 
       <div class="col-md-3 text-end">

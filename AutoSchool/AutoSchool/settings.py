@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'main',
+    'news',
 ]
 
 MIDDLEWARE = [
@@ -73,12 +74,8 @@ WSGI_APPLICATION = 'AutoSchool.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'autoSchoolDB',
-        'USER': 'schoolDirector',
-        'PASSWORD': 'AutoSchoolTestPass',
-        'HOST': 'localhost',
-        'PORT': '3306',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
